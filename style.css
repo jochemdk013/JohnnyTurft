@@ -1,7 +1,7 @@
 body, html {
     background-color: #000;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     /* min-height: 100vh; Zorgt ervoor dat de overlay minimaal de volledige viewport hoogte inneemt */
     margin: 0;
     padding: 0;
@@ -146,7 +146,7 @@ button {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     /*min-height: 100vh;  Zorgt ervoor dat de overlay minimaal de volledige viewport hoogte inneemt */
     background-color: #000;
     display: flex;
@@ -154,7 +154,7 @@ button {
     justify-content: center; 
     align-items: center; /* Centreert de inhoud horizontaal */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparante actergrond */
-    padding: 20px; /* Voegt wat ruimte toe rond de randen */
+    padding: 0px; /* Voegt wat ruimte toe rond de randen */
     background-image: url('images/complete-image.jpg');
     background-size: cover; /* Zorgt ervoor dat de achtergrond het volledige overlay-gebied bedekt */
     background-position: center; /* Centreert de achtergrondafbeelding */
@@ -171,13 +171,14 @@ button {
 }
 
 .overlay-centered {
-    max-width: 80%; /* Aanpassen op basis van de gewenste grootte */
+    width: 100%;
+    /* max-width: 80%; Aanpassen op basis van de gewenste grootte */
     object-fit: contain; /* Zorgt ervoor dat de afbeelding binnen de afmetingen past zonder te vervormen */
     margin: auto; /* Centreert horizontaal */
 }
 
 .overlay-close-button img {
-    align-self: flex-end;
+    align-self: flex-start;
     width: 100%; /* Aanpassen op basis van de grootte van je sluiticoon */
     height: auto;
 }
