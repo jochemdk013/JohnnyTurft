@@ -60,8 +60,8 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  max-width: 60px;
-  max-height: 60px;
+  max-width: 30px;
+  max-height: 30px;
 }
 
 .more-options.hidden {
