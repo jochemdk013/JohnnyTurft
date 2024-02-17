@@ -10,6 +10,7 @@ body, html {
 
 body {
     margin: 0;
+    height: 100%;
     background-image: url('background.jpg');
     background-size: cover; /* Zorgt ervoor dat de achtergrondafbeelding het hele scherm bedekt */
     background-position: center; /* Centreert de afbeelding */
