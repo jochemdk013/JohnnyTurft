@@ -50,8 +50,18 @@ function subtractTally() {
 }
 
 document.getElementById('addTally').addEventListener('click', addTally);
-document.getElementById('resetTally').addEventListener('click', resetTally);
-document.getElementById('removeTally').addEventListener('click', subtractTally);
+
+document.getElementById('moreButton').addEventListener('click', function() {
+  var moreOptions = document.getElementById('moreOptions');
+  if (moreOptions.classList.contains('hidden')) {
+    moreOptions.classList.remove('hidden');
+  } else {
+    moreOptions.classList.add('hidden');
+  }
+});
+
+//document.getElementById('resetTally').addEventListener('click', resetTally);
+//document.getElementById('removeTally').addEventListener('click', subtractTally);
 
 //document.getElementById('closeOverlay').addEventListener('click', resetTally {
 //    document.getElementById('completeOverlay').style.display = 'none';

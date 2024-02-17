@@ -37,6 +37,45 @@ button img {
     height: auto;
 }
 
+/* Schakel selectie uit voor alle elementen */
+* {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Niet-prefix versie, werkt in Chrome en Opera */
+}
+
+/* Sta selectie toe voor knoppen */
+button {
+  -webkit-user-select: auto; /* Safari */
+  -moz-user-select: auto; /* Firefox */
+  -ms-user-select: auto; /* Internet Explorer/Edge */
+  user-select: auto; /* Niet-prefix versie, werkt in Chrome en Opera */
+}
+
+.more-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.more-options.hidden {
+  display: none;
+}
+
+.more-options {
+  position: fixed;
+  right: 20px;
+  bottom: 60px; /* Of aangepast op basis van de grootte van je meer-knop */
+  background-color: #fff; /* Of een andere achtergrondkleur */
+  border-radius: 5px;
+  /*box-shadow: 0 2px 5px rgba(0,0,0,0.2); Optioneel, voor een kleine schaduw */
+  padding: 10px;
+}
+
 .content {
     /* Gebruik safe area insets hier om ervoor te zorgen dat de inhoud zichtbaar en toegankelijk blijft */
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);

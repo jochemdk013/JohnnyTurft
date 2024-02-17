@@ -24,8 +24,22 @@
     </header>
     <div id="tallyGroups"></div>
     <button id="addTally"><img src="add-icon.png" alt="Voeg toe"></button>
-    <button id="removeTally"><img src="remove-icon.png" alt="Verwijder"></button>
-    <button id="resetTally"><img src="reset-icon.png" alt="Reset"></button>
+
+    <!-- "Meer" knop -->
+    <button id="moreButton" class="more-button">
+      <img src="icons/more-icon.png" alt="Meer opties">
+    </button>
+
+    <!-- Verborgen opties -->
+    <div id="moreOptions" class="more-options hidden">
+      <button id="subtractTally">Subtract One</button>
+      <button id="resetTally">Reset All</button>
+    </div>
+
+    <!-- Stijlen en scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
     <div id="completeOverlay" style="display:none;">
         <img src="complete-image.jpg" alt="Voltooid" style="width: 100%; height: 100%;">
         <button id="closeOverlay" aria-label="Sluiten"></button>
