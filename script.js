@@ -49,20 +49,26 @@ function subtractTally() {
     updateTallyDisplay(); // Werk de weergave bij
 }
 
-document.getElementById('addTally').addEventListener('click', addTally);
+// Voeg event listeners toe na het laden van de DOM
+document.addEventListener('DOMContentLoaded', function() {
+    updateTallyDisplay();
 
-document.getElementById('moreButton').addEventListener('click', function() {
-  var moreOptions = document.getElementById('moreOptions');
-  if (moreOptions.classList.contains('hidden')) {
-    moreOptions.classList.remove('hidden');
-  } else {
-    moreOptions.classList.add('hidden');
-  }
+    document.getElementById('addTally').addEventListener('click', addTally);
+
+    document.getElementById('moreButton').addEventListener('click', function() {
+        var moreOptions = document.getElementById('moreOptions');
+        if (moreOptions.classList.contains('hidden')) {
+            moreOptions.classList.remove('hidden');
+        } else {
+            moreOptions.classList.add('hidden');
+        }
+    });
+
+    // Zorg ervoor dat de IDs overeenkomen met je HTML. Het lijkt erop dat er 'removeTally' moet zijn in plaats van 'subtractTally'
+    document.getElementById('removeTally').addEventListener('click', subtractTally);
+    document.getElementById('resetTally').addEventListener('click', resetTally);
+
+    document.getElementById('closeOverlay').addEventListener('click', function() {
+        resetTally(); // Dit zou zowel de overlay moeten verbergen als de turfjes resetten
+    });
 });
-
-document.getElementById('closeOverlay').addEventListener('click', function() {
-    resetTally(); // Dit zou zowel de overlay moeten verbergen als de turfjes resetten
-});
-
-// Zorgt ervoor dat de turfdisplay wordt geüpdatet wanneer de pagina geladen is
-document.addEventListener('DOMContentLoaded', updateTallyDisplay);
