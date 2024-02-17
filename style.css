@@ -68,14 +68,24 @@ button {
   display: none;
 }
 
+.more-options button {
+    background: none; /* Geen achtergrond */
+    border: none; /* Verwijdert de rand */
+    color: inherit; /* Neemt de tekstkleur over van de parent, pas aan naar behoefte */
+    cursor: pointer;
+    display: block; /* Zorgt ervoor dat knoppen boven elkaar staan */
+    width: 100%; /* Volledige breedte van de container */
+    text-align: right; /* Tekst uitgelijnd naar links */
+    padding: 24px; /* Wat padding voor klikbaarheid, aanpasbaar */
+}
+
 .more-options {
   position: fixed;
   right: 20px;
   bottom: 60px; /* Of aangepast op basis van de grootte van je meer-knop */
-  background-color: #fff; /* Of een andere achtergrondkleur */
-  border-radius: 5px;
-  /*box-shadow: 0 2px 5px rgba(0,0,0,0.2); Optioneel, voor een kleine schaduw */
-  padding: 10px;
+  background: transparent; /* Transparante achtergrond voor de container */
+  border: none; /* Geen rand voor de container */
+  padding: 0; /* Reset padding indien nodig */
 }
 
 .content {
