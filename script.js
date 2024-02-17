@@ -77,11 +77,16 @@ document.addEventListener('DOMContentLoaded', function() {
         resetTally();
         hideMoreOptions(); // Verberg de opties na de actie
     });
-    // Zorg ervoor dat de IDs overeenkomen met je HTML. Het lijkt erop dat er 'removeTally' moet zijn in plaats van 'subtractTally'
-    //document.getElementById('removeTally').addEventListener('click', subtractTally);
-    //document.getElementById('resetTally').addEventListener('click', resetTally);
 
-    document.getElementById('closeOverlay').addEventListener('click', function() {
-        resetTally(); // Dit zou zowel de overlay moeten verbergen als de turfjes resetten
+    document.getElementById('overlayCloseButton').addEventListener('click', function() {
+        document.getElementById('completeOverlay').classList.add('hidden');
+        resetTally(); // Als je wilt dat het resetten van de tally's onderdeel is van het sluiten.
     });
+
+    // Om de overlay te tonen
+    document.getElementById('completeOverlay').classList.remove('hidden');
+
+    // Om de overlay te verbergen
+    document.getElementById('completeOverlay').classList.add('hidden')
+
 });
