@@ -1,7 +1,3 @@
-let count = 0;
-const maxTally = 30;
-const tallyGroups = document.getElementById('tallyGroups');
-
 function updateTallyDisplay() {
     tallyGroups.innerHTML = ''; // Reset de inhoud
     let maxTallySpots = 6; // Maximaal aantal turfplaatsen
