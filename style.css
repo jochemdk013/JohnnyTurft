@@ -10,7 +10,7 @@ body, html, .overlay {
     align-items: center;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 9px;
     overflow-y: hidden;
     background-color: #000;
 }
