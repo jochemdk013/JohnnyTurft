@@ -1,6 +1,6 @@
 {
   "short_name": "JohnnyTurft",
-  "name": "Turf Application",
+  "name": "JohnnyTurft",
   "icons": [
     {
       "src": "icons/icon-192x192.png",
@@ -13,9 +13,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": "/JohnnyTurft/",
   "background_color": "#FFFFFF",
   "display": "standalone",
-  "scope": "/",
+  "scope": "/JohnnyTurft/",
   "theme_color": "#000000"
 }
