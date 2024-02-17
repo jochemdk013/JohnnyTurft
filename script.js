@@ -38,11 +38,27 @@ function resetTally() {
     document.getElementById('completeOverlay').style.display = 'none';
 }
 
+function subtractTally() {
+    // Loop achteruit door de groepen om het laatste toegevoegde turfje te vinden en te verwijderen
+    for (let i = groupCounts.length - 1; i >= 0; i--) {
+        if (groupCounts[i] > 0) {
+            groupCounts[i]--; // Verwijder een turfje uit de huidige groep
+            break; // Stop na het verwijderen van een turfje
+        }
+    }
+    updateTallyDisplay(); // Werk de weergave bij
+}
+
 document.getElementById('addTally').addEventListener('click', addTally);
 document.getElementById('resetTally').addEventListener('click', resetTally);
+document.getElementById('removeTally').addEventListener('click', subtractTally);
 
-document.getElementById('closeOverlay').addEventListener('click', resetTally {
-    document.getElementById('completeOverlay').style.display = 'none';
+//document.getElementById('closeOverlay').addEventListener('click', resetTally {
+//    document.getElementById('completeOverlay').style.display = 'none';
+//});
+
+document.getElementById('closeOverlay').addEventListener('click', function() {
+    resetTally(); // Dit zou zowel de overlay moeten verbergen als de turfjes resetten
 });
 
 // Zorgt ervoor dat de turfdisplay wordt geüpdatet wanneer de pagina geladen is
