@@ -1,9 +1,12 @@
+let count = 0;
+const maxTallySpots = 6; // Definieer maxTallySpots buiten de functies zodat het overal toegankelijk is
+
 function updateTallyDisplay() {
     tallyGroups.innerHTML = ''; // Reset de inhoud
-    let maxTallySpots = 6; // Maximaal aantal turfplaatsen
 
     for (let i = 0; i < maxTallySpots; i++) {
         const img = document.createElement('img');
+        img.classList.add('tally');
         if (i < count) {
             // Als er een turf moet worden getoond (op basis van de tellerwaarde)
             img.src = `tally-${Math.min((i % 5) + 1, 5)}.png`; // Gebruik de werkelijke turfafbeelding
@@ -11,12 +14,10 @@ function updateTallyDisplay() {
             // Toon een lege turfplaats
             img.src = 'tally-0.png'; // Veronderstelt dat je een 'lege' turfafbeelding hebt
         }
-        img.classList.add('tally');
         tallyGroups.appendChild(img);
     }
 }
 
-// Zorg ervoor dat updateTallyDisplay wordt aangeroepen bij het laden van de pagina en na elke reset
 document.addEventListener('DOMContentLoaded', updateTallyDisplay);
 
 document.getElementById('addTally').addEventListener('click', () => {
@@ -37,4 +38,3 @@ document.getElementById('resetTally').addEventListener('click', () => {
     count = 0;
     updateTallyDisplay();
 });
-
