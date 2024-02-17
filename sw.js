@@ -7,6 +7,7 @@ const assets = [
     'add-icon.png',
     'remove-icon.png',
     'reset-icon.png',
+    'tally-0.png',
     'tally-1.png',
     'tally-2.png',
     'tally-3.png',

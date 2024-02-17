@@ -10,7 +10,8 @@ function updateTallyDisplay() {
         groupDiv.classList.add('tallyGroup');
 
         const img = document.createElement('img');
-        img.src = `tally-${count}.png`; // Toont de afbeelding die overeenkomt met het aantal turfjes
+        // Zorg ervoor dat we verwijzen naar 'tally-0.png' voor de lege staat
+        img.src = count === 0 ? 'tally-0.png' : `tally-${count}.png`; 
         img.classList.add('tally');
         groupDiv.appendChild(img);
 
