@@ -28,7 +28,15 @@ button img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 100%;
+    width: 562px;
+}
+
+.tallyGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 48%; /* Voor twee kolommen */
+    margin-bottom: 2px; /* Afstand tussen de rijen */
 }
 
 .tally {
