@@ -10,7 +10,7 @@ function updateTallyDisplay() {
         
         const img = document.createElement('img');
         img.classList.add('tally');
-        img.src = count === 0 ? 'tally-0.png' : `tally-${count}.png`; // Past het pad aan op basis van de teller
+        img.src = count === 0 ? 'images/tally-0.png' : `images/tally-${count}.png`; // Past het pad aan op basis van de teller
         groupDiv.appendChild(img);
 
         tallyGroups.appendChild(groupDiv);

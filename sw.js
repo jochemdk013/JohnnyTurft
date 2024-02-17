@@ -4,17 +4,17 @@ const assets = [
     'index.html',
     'style.css',
     'script.js',
-    'add-icon.png',
-    'remove-icon.png',
-    'reset-icon.png',
-    'tally-0.png',
-    'tally-1.png',
-    'tally-2.png',
-    'tally-3.png',
-    'tally-4.png',
-    'tally-5.png',
-    'background.jpg',
-    'complete-image.jpg'
+    'icons/add-icon.png',
+    'icons/close-icon.png',
+    'icons/moreicon.png',
+    'images/tally-0.png',
+    'images/tally-1.png',
+    'images/tally-2.png',
+    'images/tally-3.png',
+    'images/tally-4.png',
+    'images/tally-5.png',
+    'images/background.jpg',
+    'images/complete-image.jpg'
 ];
 
 self.addEventListener('install', evt => {

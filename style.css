@@ -17,7 +17,7 @@ body, html {
 body {
     margin: 0;
     height: 100%;
-    background-image: url('background.jpg');
+    background-image: url('images/background.jpg');
     background-size: cover; /* Zorgt ervoor dat de achtergrondafbeelding het hele scherm bedekt */
     background-position: center; /* Centreert de afbeelding */
     background-repeat: no-repeat; /* Voorkomt herhaling van de afbeelding */
@@ -155,7 +155,7 @@ button {
     align-items: center; /* Centreert de inhoud horizontaal */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparante actergrond */
     padding: 20px; /* Voegt wat ruimte toe rond de randen */
-    background-image: url('complete-image.jpg');
+    background-image: url('images/complete-image.jpg');
     background-size: cover; /* Zorgt ervoor dat de achtergrond het volledige overlay-gebied bedekt */
     background-position: center; /* Centreert de achtergrondafbeelding */
     padding-bottom: env(safe-area-inset-bottom); /* Voegt extra padding toe aan de onderkant */
@@ -194,32 +194,4 @@ button {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-}
-
-#closeOverlay {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 32px;
-    height: 32px;
-    background-color: transparent;
-    border: none;
-}
-
-#closeOverlay::before, #closeOverlay::after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    left: 4px;
-    width: 24px;
-    height: 2px;
-    background-color: #000;
-}
-
-#closeOverlay::before {
-    transform: rotate(45deg);
-}
-
-#closeOverlay::after {
-    transform: rotate(-45deg);
 }
