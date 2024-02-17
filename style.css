@@ -28,7 +28,7 @@ button img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 562px;
+    width: 100%;
 }
 
 .tallyGroup {
