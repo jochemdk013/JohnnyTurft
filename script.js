@@ -59,6 +59,7 @@ function addTally() {
         groupCounts[index]++;
         updateTallyDisplay();
     }
+    document.getElementById('moreOptions').classList.add('hidden');
 }
 
 function resetTally() {
