@@ -8,7 +8,10 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    overflow-y: hidden; /* Voorkomt verticaal scrollen */
+    background-color: #000; /* Zwart */
 }
 
 body {
@@ -148,7 +151,7 @@ button {
     background-color: #000;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Dit zorgt ervoor dat items vanaf de bovenkant worden uitgelijnd */
+    justify-content: center; 
     align-items: center; /* Centreert de inhoud horizontaal */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparante actergrond */
     padding: 20px; /* Voegt wat ruimte toe rond de randen */
@@ -164,11 +167,13 @@ button {
     width: 100%; /* Maakt de header-afbeelding volledige breedte */
     height: auto;
     object-fit: cover; /* Zorgt ervoor dat de afbeelding de container goed vult */
+    margin: auto; /* Centreert horizontaal */
 }
 
 .overlay-centered {
     max-width: 100%; /* Aanpassen op basis van de gewenste grootte */
     object-fit: contain; /* Zorgt ervoor dat de afbeelding binnen de afmetingen past zonder te vervormen */
+    margin: auto; /* Centreert horizontaal */
 }
 
 .overlay-close-button img {
