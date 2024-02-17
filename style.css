@@ -60,7 +60,7 @@ button {
 
 .more-button {
   position: fixed;
-  right: 20px;
+  left: 20px;
   bottom: 20px;
   background-color: transparent;
   border: none;
@@ -136,7 +136,7 @@ button {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Dit zorgt ervoor dat de header en de sluitknop uit elkaar staan */
+    justify-content: flex-start; /* Dit zorgt ervoor dat items vanaf de bovenkant worden uitgelijnd */
     align-items: center; /* Centreert de inhoud horizontaal */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparante actergrond */
     padding: 20px; /* Voegt wat ruimte toe rond de randen */
@@ -148,8 +148,9 @@ button {
 }
 
 .overlay-header {
+    align-self: flex-start; /* Uitlijnen aan de bovenkant van de overlay */
     width: 100%; /* Maakt de header-afbeelding volledige breedte */
-    max-height: 100px; /* Pas dit aan op basis van je afbeeldingsgrootte */
+    height: auto;
     object-fit: cover; /* Zorgt ervoor dat de afbeelding de container goed vult */
 }
 
