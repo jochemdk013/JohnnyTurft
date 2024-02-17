@@ -2,7 +2,7 @@ body, html {
     background-color: #000;
     width: 100%;
     height: 100vh;
-    /* min-height: 100vh; Zorgt ervoor dat de overlay minimaal de volledige viewport hoogte inneemt */
+    /* min-height: 100vh; */
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,22 +10,21 @@ body, html {
     align-items: center;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    overflow-y: hidden; /* Voorkomt verticaal scrollen */
-    background-color: #000; /* Zwart */
+    overflow-y: hidden;
+    background-color: #000;
 }
 
 body {
     margin: 0;
     height: 100%;
     background-image: url('images/background.jpg');
-    background-size: cover; /* Zorgt ervoor dat de achtergrondafbeelding het hele scherm bedekt */
-    background-position: center; /* Centreert de afbeelding */
-    background-repeat: no-repeat; /* Voorkomt herhaling van de afbeelding */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding-top: env(safe-area-inset-top);
     padding-left: env(safe-area-inset-left);
     padding-bottom: env(safe-area-inset-bottom);
     padding-right: env(safe-area-inset-right);
-
 }
 
 header img {
@@ -45,20 +44,18 @@ button img {
     height: auto;
 }
 
-/* Schakel selectie uit voor alle elementen */
 * {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Niet-prefix versie, werkt in Chrome en Opera */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-/* Sta selectie toe voor knoppen */
 button {
-  -webkit-user-select: auto; /* Safari */
-  -moz-user-select: auto; /* Firefox */
-  -ms-user-select: auto; /* Internet Explorer/Edge */
-  user-select: auto; /* Niet-prefix versie, werkt in Chrome en Opera */
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
 }
 
 .hidden {
@@ -81,56 +78,55 @@ button {
 }
 
 .more-options button {
-    background: none; /* Geen achtergrond */
-    border: none; /* Verwijdert de rand */
-    color: inherit; /* Neemt de tekstkleur over van de parent, pas aan naar behoefte */
+    background: none;
+    border: none;
+    color: inherit;
     cursor: pointer;
-    display: block; /* Zorgt ervoor dat knoppen boven elkaar staan */
-    width: 100%; /* Volledige breedte van de container */
-    text-align: left; /* Tekst uitgelijnd naar links */
-    padding: 0px; /* Wat padding voor klikbaarheid, aanpasbaar */
-    font-size: 16px; /* Aangepaste lettergrootte */
-    font-weight: bold; /* Maakt de tekst vetgedrukt */
-    padding-top: 6px; /* Voegt extra ruimte toe aan de bovenkant */
-    padding-bottom: 6px; /* Voegt extra ruimte toe aan de onderkant */
+    display: block;
+    width: 100%; 
+    text-align: left;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .more-options {
   position: fixed;
   left: 20px;
-  bottom: 52px; /* Of aangepast op basis van de grootte van je meer-knop */
-  background: transparent; /* Transparante achtergrond voor de container */
-  border: none; /* Geen rand voor de container */
-  padding: 0; /* Reset padding indien nodig */
+  bottom: 52px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .content {
-    /* Gebruik safe area insets hier om ervoor te zorgen dat de inhoud zichtbaar en toegankelijk blijft */
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 #tallyGroups {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Dit zorgt voor gelijke ruimte rond items */
-    max-width: 1130px; /* Breedte aangepast om twee afbeeldingen + wat ruimte ertussen te accommoderen */
+    justify-content: space-around;
+    max-width: 1130px;
     margin: auto;
 }
 
 .tallyGroup {
-    width: calc(50% - 4px); /* Trekt een kleine marge af om ruimte tussen de kolommen te garanderen */
+    width: calc(50% - 4px);
     display: flex;
-    justify-content: center; /* Centreert de afbeelding binnen elke .tallyGroup */
+    justify-content: center;
 }
 
 .tally {
-    max-width: 100%; /* Zorgt ervoor dat de afbeelding binnen zijn container past */
-    height: auto; /* Behoudt de aspectratio */
+    max-width: 100%;
+    height: auto;
 }
 
 .addTally img {
     align-self: flex-end;
-    width: 100%; /* Aanpassen op basis van de grootte van je sluiticoon */
+    width: 100%;
     height: auto;
 }
 
@@ -147,42 +143,41 @@ button {
     left: 0;
     width: 100%;
     height: 100vh;
-    /*min-height: 100vh;  Zorgt ervoor dat de overlay minimaal de volledige viewport hoogte inneemt */
+    /*min-height: 100vh; */
     background-color: #000;
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    align-items: center; /* Centreert de inhoud horizontaal */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparante actergrond */
-    padding: 0px; /* Voegt wat ruimte toe rond de randen */
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0px;
     background-image: url('images/complete-image.jpg');
-    background-size: cover; /* Zorgt ervoor dat de achtergrond het volledige overlay-gebied bedekt */
-    background-position: center; /* Centreert de achtergrondafbeelding */
-    padding-bottom: env(safe-area-inset-bottom); /* Voegt extra padding toe aan de onderkant */
-    z-index: 10; /* Zorgt ervoor dat de overlay boven andere inhoud wordt weergegeven */
+    background-size: cover;
+    background-position: center;
+    padding-bottom: env(safe-area-inset-bottom);
+    z-index: 10;
 }
 
 .overlay-header {
-    align-self: flex-start; /* Uitlijnen aan de bovenkant van de overlay */
-    width: 100%; /* Maakt de header-afbeelding volledige breedte */
+    align-self: flex-start;
+    width: 100%;
     height: auto;
-    object-fit: cover; /* Zorgt ervoor dat de afbeelding de container goed vult */
-    margin: auto; /* Centreert horizontaal */
+    object-fit: cover;
+    margin: auto;
 }
 
 .overlay-centered {
     width: 100%;
-    /* max-width: 80%; Aanpassen op basis van de gewenste grootte */
-    object-fit: contain; /* Zorgt ervoor dat de afbeelding binnen de afmetingen past zonder te vervormen */
-    margin: auto; /* Centreert horizontaal */
+    /* max-width: 80%; */
+    object-fit: contain;
+    margin: auto;
 }
 
 .overlay-close-button img {
     align-self: flex-start;
-    width: 100%; /* Aanpassen op basis van de grootte van je sluiticoon */
+    width: 100%;
     height: auto;
 }
-
 
 #completeOverlay {
     position: fixed;

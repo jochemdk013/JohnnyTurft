@@ -1,8 +1,8 @@
-let groupCounts = [0, 0, 0, 0, 0, 0]; // Elke index vertegenwoordigt het aantal turfjes in die groep
+let groupCounts = [0, 0, 0, 0, 0, 0];
 
 function updateTallyDisplay() {
     const tallyGroups = document.getElementById('tallyGroups');
-    tallyGroups.innerHTML = ''; // Reset de inhoud
+    tallyGroups.innerHTML = '';
 
     groupCounts.forEach((count, index) => {
         const groupDiv = document.createElement('div');
@@ -10,13 +10,12 @@ function updateTallyDisplay() {
         
         const img = document.createElement('img');
         img.classList.add('tally');
-        img.src = count === 0 ? 'images/tally-0.png' : `images/tally-${count}.png`; // Past het pad aan op basis van de teller
+        img.src = count === 0 ? 'images/tally-0.png' : `images/tally-${count}.png`;
         groupDiv.appendChild(img);
 
         tallyGroups.appendChild(groupDiv);
     });
 
-    // Toon de complete image als alle turfjes zijn toegevoegd
     if (groupCounts.every(count => count === 5)) {
         document.getElementById('completeOverlay').style.display = "flex";
     } else {
@@ -39,21 +38,19 @@ function resetTally() {
 }
 
 function subtractTally() {
-    // Loop achteruit door de groepen om het laatste toegevoegde turfje te vinden en te verwijderen
     for (let i = groupCounts.length - 1; i >= 0; i--) {
         if (groupCounts[i] > 0) {
-            groupCounts[i]--; // Verwijder een turfje uit de huidige groep
-            break; // Stop na het verwijderen van een turfje
+            groupCounts[i]--;
+            break;
         }
     }
-    updateTallyDisplay(); // Werk de weergave bij
+    updateTallyDisplay();
 }
 
 function hideMoreOptions() {
     document.getElementById('moreOptions').classList.add('hidden');
 }
 
-// Voeg event listeners toe na het laden van de DOM
 document.addEventListener('DOMContentLoaded', function() {
     updateTallyDisplay();
 
@@ -70,23 +67,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('removeTally').addEventListener('click', function() {
         subtractTally();
-        hideMoreOptions(); // Verberg de opties na de actie
+        hideMoreOptions();
     });
 
     document.getElementById('resetTally').addEventListener('click', function() {
         resetTally();
-        hideMoreOptions(); // Verberg de opties na de actie
+        hideMoreOptions();
     });
 
     document.getElementById('overlayCloseButton').addEventListener('click', function() {
         document.getElementById('completeOverlay').classList.add('hidden');
-        resetTally(); // Als je wilt dat het resetten van de tally's onderdeel is van het sluiten.
+        resetTally();
     });
 
-    // Om de overlay te tonen
     document.getElementById('completeOverlay').classList.remove('hidden');
-
-    // Om de overlay te verbergen
     document.getElementById('completeOverlay').classList.add('hidden')
-
 });
