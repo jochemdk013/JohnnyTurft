@@ -85,14 +85,14 @@ button {
     padding: 0px; /* Wat padding voor klikbaarheid, aanpasbaar */
     font-size: 16px; /* Aangepaste lettergrootte */
     font-weight: bold; /* Maakt de tekst vetgedrukt */
-    padding-top: 12px; /* Voegt extra ruimte toe aan de bovenkant */
-    padding-bottom: 12px; /* Voegt extra ruimte toe aan de onderkant */
+    padding-top: 6px; /* Voegt extra ruimte toe aan de bovenkant */
+    padding-bottom: 6px; /* Voegt extra ruimte toe aan de onderkant */
 }
 
 .more-options {
   position: fixed;
   left: 20px;
-  bottom: 40px; /* Of aangepast op basis van de grootte van je meer-knop */
+  bottom: 520px; /* Of aangepast op basis van de grootte van je meer-knop */
   background: transparent; /* Transparante achtergrond voor de container */
   border: none; /* Geen rand voor de container */
   padding: 0; /* Reset padding indien nodig */
