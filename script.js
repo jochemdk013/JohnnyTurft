@@ -1,5 +1,6 @@
 let groupCounts = [0, 0, 0, 0, 0, 0];
 
+/*
 function updateTallyDisplay() {
     const tallyGroups = document.getElementById('tallyGroups');
     tallyGroups.innerHTML = '';
@@ -21,6 +22,35 @@ function updateTallyDisplay() {
     } else {
         document.getElementById('completeOverlay').style.display = "none";
     }
+}
+*/
+
+function updateTallyDisplay() {
+    const tallyGroups = document.getElementById('tallyGroups');
+    tallyGroups.innerHTML = '';
+
+    let totalTallies = 0;
+
+    groupCounts.forEach((count, index) => {
+        totalTallies += count;
+        const groupDiv = document.createElement('div');
+        groupDiv.classList.add('tallyGroup');
+        
+        const img = document.createElement('img');
+        img.classList.add('tally');
+        img.src = count === 0 ? 'tally-0.png' : `tally-${count}.png`;
+        groupDiv.appendChild(img);
+
+        tallyGroups.appendChild(groupDiv);
+    });
+
+    if (groupCounts.every(count => count === 5)) {
+        document.getElementById('completeOverlay').style.display = "flex";
+    } else {
+        document.getElementById('completeOverlay').style.display = "none";
+    }
+
+    document.getElementById('moreButton').style.display = totalTallies > 0 ? "block" : "none";
 }
 
 function addTally() {
