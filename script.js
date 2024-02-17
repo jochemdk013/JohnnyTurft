@@ -49,6 +49,10 @@ function subtractTally() {
     updateTallyDisplay(); // Werk de weergave bij
 }
 
+function hideMoreOptions() {
+    document.getElementById('moreOptions').classList.add('hidden');
+}
+
 // Voeg event listeners toe na het laden van de DOM
 document.addEventListener('DOMContentLoaded', function() {
     updateTallyDisplay();
@@ -64,9 +68,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    document.getElementById('removeTally').addEventListener('click', function() {
+        subtractTally();
+        hideMoreOptions(); // Verberg de opties na de actie
+    });
+
+    document.getElementById('resetTally').addEventListener('click', function() {
+        resetTally();
+        hideMoreOptions(); // Verberg de opties na de actie
+    });
     // Zorg ervoor dat de IDs overeenkomen met je HTML. Het lijkt erop dat er 'removeTally' moet zijn in plaats van 'subtractTally'
-    document.getElementById('removeTally').addEventListener('click', subtractTally);
-    document.getElementById('resetTally').addEventListener('click', resetTally);
+    //document.getElementById('removeTally').addEventListener('click', subtractTally);
+    //document.getElementById('resetTally').addEventListener('click', resetTally);
 
     document.getElementById('closeOverlay').addEventListener('click', function() {
         resetTally(); // Dit zou zowel de overlay moeten verbergen als de turfjes resetten
