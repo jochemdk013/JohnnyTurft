@@ -76,7 +76,11 @@ button {
     display: block; /* Zorgt ervoor dat knoppen boven elkaar staan */
     width: 100%; /* Volledige breedte van de container */
     text-align: right; /* Tekst uitgelijnd naar links */
-    padding: 24px; /* Wat padding voor klikbaarheid, aanpasbaar */
+    padding: 0px; /* Wat padding voor klikbaarheid, aanpasbaar */
+    font-size: 16px; /* Aangepaste lettergrootte */
+    font-weight: bold; /* Maakt de tekst vetgedrukt */
+    padding-top: 15px; /* Voegt extra ruimte toe aan de bovenkant */
+    padding-bottom: 15px; /* Voegt extra ruimte toe aan de onderkant */
 }
 
 .more-options {
