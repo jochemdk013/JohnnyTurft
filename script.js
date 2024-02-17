@@ -60,13 +60,6 @@ document.getElementById('moreButton').addEventListener('click', function() {
   }
 });
 
-//document.getElementById('resetTally').addEventListener('click', resetTally);
-//document.getElementById('removeTally').addEventListener('click', subtractTally);
-
-//document.getElementById('closeOverlay').addEventListener('click', resetTally {
-//    document.getElementById('completeOverlay').style.display = 'none';
-//});
-
 document.getElementById('closeOverlay').addEventListener('click', function() {
     resetTally(); // Dit zou zowel de overlay moeten verbergen als de turfjes resetten
 });
