@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JohnnyTurft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Turf App">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <header>
+        <img src="header-image.jpg" alt="Header Image" style="width: 100%;">
+    </header>
+    <button id="addTally"><img src="add-icon.png" alt="Voeg toe"></button>
+    <div id="tallyGroups"></div>
+    <button id="removeTally"><img src="remove-icon.png" alt="Verwijder"></button>
+    <button id="resetTally"><img src="reset-icon.png" alt="Reset"></button>
+    <div id="completeOverlay" style="display:none;">
+        <img src="complete-image.jpg" alt="Voltooid" style="width: 100%; height: 100%;">
+        <button id="closeOverlay" aria-label="Sluiten"></button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('Service Worker registered! Scope:', registration.scope);
+          }).catch(err => {
+            console.log('Service Worker registration failed:', err);
+          });
+        });
+      }
+    </script>
+</body>
+</html>
