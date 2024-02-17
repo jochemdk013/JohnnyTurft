@@ -27,17 +27,16 @@ button img {
 #tallyGroups {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between; /* Zorgt voor een gelijke verdeling */
+    max-width: 562px; /* Of een andere breedte afhankelijk van je ontwerp */
+    margin: auto; /* Centreert de container indien de pagina breder is dan max-width */
 }
 
 .tallyGroup {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 48%; /* Voor twee kolommen */
-    margin-bottom: 2px; /* Afstand tussen de rijen */
+    width: 48%; /* Voor twee kolommen, past de breedte aan zodat er ruimte is tussen de kolommen */
+    margin-bottom: 2px; /* Ruimte tussen de rijen */
 }
+
 
 .tally {
     width: 48%;

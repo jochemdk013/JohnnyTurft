@@ -4,23 +4,27 @@ function updateTallyDisplay() {
     const tallyGroups = document.getElementById('tallyGroups');
     tallyGroups.innerHTML = ''; // Reset de inhoud
 
-    // Maak zes turf groepen
     groupCounts.forEach((count, index) => {
         const groupDiv = document.createElement('div');
         groupDiv.classList.add('tallyGroup');
-
+        
         const img = document.createElement('img');
-        // Zorg ervoor dat we verwijzen naar 'tally-0.png' voor de lege staat
-        img.src = count === 0 ? 'tally-0.png' : `tally-${count}.png`; 
         img.classList.add('tally');
+        img.src = count === 0 ? 'tally-0.png' : `tally-${count}.png`; // Past het pad aan op basis van de teller
         groupDiv.appendChild(img);
 
         tallyGroups.appendChild(groupDiv);
     });
+
+    // Toon de complete image als alle turfjes zijn toegevoegd
+    if (groupCounts.every(count => count === 5)) {
+        document.getElementById('completeOverlay').style.display = "flex";
+    } else {
+        document.getElementById('completeOverlay').style.display = "none";
+    }
 }
 
 function addTally() {
-    // Zoek de eerste groep die niet vol is (minder dan 5) en voeg een turfje toe
     const index = groupCounts.findIndex(count => count < 5);
     if (index !== -1) {
         groupCounts[index]++;
@@ -35,4 +39,5 @@ document.getElementById('resetTally').addEventListener('click', () => {
     updateTallyDisplay();
 });
 
+// Zorgt ervoor dat de turfdisplay wordt geüpdatet wanneer de pagina geladen is
 document.addEventListener('DOMContentLoaded', updateTallyDisplay);
