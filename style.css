@@ -10,7 +10,6 @@ body, html, .overlay {
     align-items: center;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    letter-spacing: 9px;
     overflow-y: hidden;
     background-color: #000;
 }
@@ -140,6 +139,10 @@ button {
         width: 47%;
         margin: 1%;
     }
+}
+
+#removeTally, #resetTally {
+    letter-spacing: 12px;
 }
 
 .overlay {
