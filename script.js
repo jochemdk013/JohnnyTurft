@@ -41,7 +41,7 @@ function resetTally() {
 document.getElementById('addTally').addEventListener('click', addTally);
 document.getElementById('resetTally').addEventListener('click', resetTally);
 
-document.getElementById('closeOverlay').addEventListener('click', function() {
+document.getElementById('closeOverlay').addEventListener('click', resetTally {
     document.getElementById('completeOverlay').style.display = 'none';
 });
 
