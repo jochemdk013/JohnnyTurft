@@ -19,6 +19,7 @@ body {
     padding-left: env(safe-area-inset-left);
     padding-bottom: env(safe-area-inset-bottom);
     padding-right: env(safe-area-inset-right);
+
 }
 
 header img {
@@ -149,7 +150,7 @@ button {
     background-image: url('complete-image.jpg');
     background-size: cover; /* Zorgt ervoor dat de achtergrond het volledige overlay-gebied bedekt */
     background-position: center; /* Centreert de achtergrondafbeelding */
-    padding: 20px; /* Voegt wat ruimte toe rond de randen */
+    padding-bottom: env(safe-area-inset-bottom); /* Voegt extra padding toe aan de onderkant */
     z-index: 10; /* Zorgt ervoor dat de overlay boven andere inhoud wordt weergegeven */
 }
 
@@ -161,7 +162,7 @@ button {
 }
 
 .overlay-centered {
-    max-width: 80%; /* Aanpassen op basis van de gewenste grootte */
+    max-width: 100%; /* Aanpassen op basis van de gewenste grootte */
     object-fit: contain; /* Zorgt ervoor dat de afbeelding binnen de afmetingen past zonder te vervormen */
 }
 
