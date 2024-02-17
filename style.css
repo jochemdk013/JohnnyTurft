@@ -23,7 +23,7 @@ header img {
 button {
     border: none;
     background: none;
-    padding: 10px;
+    padding: 0px;
     cursor: pointer;
 }
 
@@ -35,21 +35,20 @@ button img {
 #tallyGroups {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Zorgt voor een gelijke verdeling */
-    max-width: 562px; /* Of een andere breedte afhankelijk van je ontwerp */
-    margin: auto; /* Centreert de container indien de pagina breder is dan max-width */
+    justify-content: space-around; /* Dit zorgt voor gelijke ruimte rond items */
+    max-width: 1130px; /* Breedte aangepast om twee afbeeldingen + wat ruimte ertussen te accommoderen */
+    margin: auto;
 }
 
 .tallyGroup {
-    width: 48%; /* Voor twee kolommen, past de breedte aan zodat er ruimte is tussen de kolommen */
-    margin-bottom: 2px; /* Ruimte tussen de rijen */
+    width: calc(50% - 4px); /* Trekt een kleine marge af om ruimte tussen de kolommen te garanderen */
+    display: flex;
+    justify-content: center; /* Centreert de afbeelding binnen elke .tallyGroup */
 }
 
-
 .tally {
-    width: 48%;
-    margin: 1%;
-    box-sizing: border-box;
+    max-width: 100%; /* Zorgt ervoor dat de afbeelding binnen zijn container past */
+    height: auto; /* Behoudt de aspectratio */
 }
 
 @media (min-width: 562px) {
