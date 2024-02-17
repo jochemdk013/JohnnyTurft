@@ -121,6 +121,12 @@ button {
     height: auto; /* Behoudt de aspectratio */
 }
 
+.addTally img {
+    align-self: flex-end;
+    width: 100%; /* Aanpassen op basis van de grootte van je sluiticoon */
+    height: auto;
+}
+
 @media (min-width: 562px) {
     .tally {
         width: 47%;
@@ -159,16 +165,9 @@ button {
     object-fit: contain; /* Zorgt ervoor dat de afbeelding binnen de afmetingen past zonder te vervormen */
 }
 
-.overlay-close-button {
-    position: absolute; /* Hiermee kun je de knop over de overlay positioneren */
-    bottom: 20px; /* Afstand van onderkant */
-    right: 20px; /* Afstand van rechterkant, pas aan om te verplaatsen naar waar de 'Add'-knop staat */
-    background: none;
-    border: none;
-}
-
 .overlay-close-button img {
-    width: 50px; /* Aanpassen op basis van de grootte van je sluiticoon */
+    align-self: flex-end;
+    width: 100%; /* Aanpassen op basis van de grootte van je sluiticoon */
     height: auto;
 }
 
