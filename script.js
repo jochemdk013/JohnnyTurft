@@ -32,11 +32,17 @@ function addTally() {
     }
 }
 
-document.getElementById('addTally').addEventListener('click', addTally);
-
-document.getElementById('resetTally').addEventListener('click', () => {
-    groupCounts.fill(0); // Reset alle groepen naar 0 turfjes
+function resetTally() {
+    groupCounts.fill(0);
     updateTallyDisplay();
+    document.getElementById('completeOverlay').style.display = 'none';
+}
+
+document.getElementById('addTally').addEventListener('click', addTally);
+document.getElementById('resetTally').addEventListener('click', resetTally);
+
+document.getElementById('closeOverlay').addEventListener('click', function() {
+    document.getElementById('completeOverlay').style.display = 'none';
 });
 
 // Zorgt ervoor dat de turfdisplay wordt geüpdatet wanneer de pagina geladen is
