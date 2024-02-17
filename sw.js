@@ -1,18 +1,17 @@
 const cacheName = 'site-static-v1';
 const assets = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/script.js',
-    '/add-icon.png',
-    '/remove-icon.png',
-    '/reset-icon.png',
-    '/tally-1.png',
-    '/tally-2.png',
-    '/tally-3.png',
-    '/tally-4.png',
-    '/tally-5.png',
-    // Voeg hier andere assets en icoon paden toe
+    '',
+    'index.html',
+    'style.css',
+    'script.js',
+    'add-icon.png',
+    'remove-icon.png',
+    'reset-icon.png',
+    'tally-1.png',
+    'tally-2.png',
+    'tally-3.png',
+    'tally-4.png',
+    'tally-5.png',
 ];
 
 self.addEventListener('install', evt => {
