@@ -3,33 +3,28 @@ const maxTally = 30;
 const tallyGroups = document.getElementById('tallyGroups');
 
 function updateTallyDisplay() {
-    tallyGroups.innerHTML = '';
-    let fullSets = Math.floor(count / 5);
-    let remainder = count % 5;
+    tallyGroups.innerHTML = ''; // Reset de inhoud
+    let maxTallySpots = 6; // Maximaal aantal turfplaatsen
 
-    for (let i = 0; i < fullSets; i++) {
+    for (let i = 0; i < maxTallySpots; i++) {
         const img = document.createElement('img');
-        img.src = `tally-5.png`;
+        if (i < count) {
+            // Als er een turf moet worden getoond (op basis van de tellerwaarde)
+            img.src = `tally-${Math.min((i % 5) + 1, 5)}.png`; // Gebruik de werkelijke turfafbeelding
+        } else {
+            // Toon een lege turfplaats
+            img.src = 'tally-0.png'; // Veronderstelt dat je een 'lege' turfafbeelding hebt
+        }
         img.classList.add('tally');
         tallyGroups.appendChild(img);
-    }
-
-    if (remainder > 0) {
-        const img = document.createElement('img');
-        img.src = `tally-${remainder}.png`;
-        img.classList.add('tally');
-        tallyGroups.appendChild(img);
-    }
-
-    if (count >= 30) {
-        document.getElementById('completeOverlay').style.display = "flex";
-    } else {
-        document.getElementById('completeOverlay').style.display = "none";
     }
 }
 
+// Zorg ervoor dat updateTallyDisplay wordt aangeroepen bij het laden van de pagina en na elke reset
+document.addEventListener('DOMContentLoaded', updateTallyDisplay);
+
 document.getElementById('addTally').addEventListener('click', () => {
-    if (count < maxTally) {
+    if (count < maxTallySpots) {
         count++;
         updateTallyDisplay();
     }
@@ -47,8 +42,3 @@ document.getElementById('resetTally').addEventListener('click', () => {
     updateTallyDisplay();
 });
 
-document.getElementById('closeOverlay').addEventListener('click', function() {
-    document.getElementById('completeOverlay').style.display = 'none';
-});
-
-updateTallyDisplay();
