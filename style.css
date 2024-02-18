@@ -56,10 +56,6 @@ button {
   user-select: auto;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 img {
     -webkit-touch-callout: none; /* iOS Safari */
 }
@@ -134,6 +130,12 @@ img {
     align-self: flex-end;
     width: 100%;
     height: auto;
+}
+
+.addTally:active, .addTally:focus {
+    background-color: transparent;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 @media (min-width: 562px) {
