@@ -58,6 +58,10 @@ button {
   user-select: auto;
 }
 
+img {
+    -webkit-touch-callout: none; /* iOS Safari */
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -69,7 +73,7 @@ button {
 .more-button {
   position: fixed;
   left: 20px;
-  bottom: 20px;
+  bottom: 30px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -98,11 +102,19 @@ button {
 
 .more-options {
   position: fixed;
-  left: 20px;
-  bottom: 52px;
+  left: 30px;
+  bottom: 22px;
   background: transparent;
   border: none;
   padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 1s ease-in-out;
+}
+
+.more-options.show {
+    opacity: 1; /* Volledig zichtbaar */
+    visibility: visible; /* Maakt het element interactief */
 }
 
 .content {
