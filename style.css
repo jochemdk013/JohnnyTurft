@@ -92,13 +92,13 @@ img {
     font-size: 15px;
     font-weight: bold;
     padding-top: 6px;
-    padding-bottom: 8px;
+    padding-bottom: 14px;
 }
 
 .more-options {
   position: fixed;
-  left: 35px;
-  bottom: 86px;
+  left: 28px;
+  bottom: 62px;
   background: transparent;
   border: none;
   padding: 0;
