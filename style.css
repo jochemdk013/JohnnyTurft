@@ -37,6 +37,7 @@ button, button img {
     height: auto;
     border: none;
     background: none;
+    background-color: transparent;
     padding: 0px;
     cursor: pointer;
 }
