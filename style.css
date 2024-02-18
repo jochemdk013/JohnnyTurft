@@ -103,18 +103,18 @@ img {
 .more-options {
   position: fixed;
   left: 30px;
-  bottom: 22px;
+  bottom: 82px;
   background: transparent;
   border: none;
   padding: 0;
   opacity: 0;
   visibility: hidden;
-  transition: visibility 0s, opacity 1s ease-in-out;
+  transition: opacity 3s ease-in-out, visibility 2s ease-in-out;
 }
 
 .more-options.show {
-    opacity: 1; /* Volledig zichtbaar */
-    visibility: visible; /* Maakt het element interactief */
+    opacity: 1;
+    visibility: visible;
 }
 
 .content {

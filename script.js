@@ -53,10 +53,6 @@ function subtractTally() {
     updateTallyDisplay();
 }
 
-function hideMoreOptions() {
-    document.getElementById('moreOptions').classList.add('hidden');
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     updateTallyDisplay();
 
@@ -64,22 +60,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('moreButton').addEventListener('click', function() {
         var moreOptions = document.getElementById('moreOptions');
-        moreOptions.classList.toggle('show');
-        if (moreOptions.classList.contains('hidden')) {
-            moreOptions.classList.remove('hidden');
+        if (moreOptions.classList.contains('show')) {
+            moreOptions.classList.remove('show');
+            moreOptions.style.opacity = '0';
+            setTimeout(function() { moreOptions.style.visibility = 'hidden'; }, 1000);
         } else {
-            moreOptions.classList.add('hidden');
+            moreOptions.style.visibility = 'visible';
+            moreOptions.style.opacity = '1';
+            moreOptions.classList.add('show');
         }
     });
 
     document.getElementById('removeTally').addEventListener('click', function() {
         subtractTally();
-        hideMoreOptions();
+        toggleMoreOptions();
     });
 
     document.getElementById('resetTally').addEventListener('click', function() {
         resetTally();
-        hideMoreOptions();
+        toggleMoreOptions();
     });
 
     document.getElementById('overlayCloseButton').addEventListener('click', function() {
