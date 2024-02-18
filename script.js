@@ -1,5 +1,30 @@
 let groupCounts = [0, 0, 0, 0, 0, 0];
 
+/*
+function updateTallyDisplay() {
+    const tallyGroups = document.getElementById('tallyGroups');
+    tallyGroups.innerHTML = '';
+
+    groupCounts.forEach((count, index) => {
+        const groupDiv = document.createElement('div');
+        groupDiv.classList.add('tallyGroup');
+        
+        const img = document.createElement('img');
+        img.classList.add('tally');
+        img.src = count === 0 ? 'images/tally-0.png' : `images/tally-${count}.png`;
+        groupDiv.appendChild(img);
+
+        tallyGroups.appendChild(groupDiv);
+    });
+
+    if (groupCounts.every(count => count === 5)) {
+        document.getElementById('completeOverlay').style.display = "flex";
+    } else {
+        document.getElementById('completeOverlay').style.display = "none";
+    }
+}
+*/
+
 function updateTallyDisplay() {
     const tallyGroups = document.getElementById('tallyGroups');
     tallyGroups.innerHTML = '';
@@ -53,9 +78,8 @@ function subtractTally() {
     updateTallyDisplay();
 }
 
-function toggleMoreOptions() {
-    var moreOptions = document.getElementById('moreOptions');
-    moreOptions.classList.toggle('hidden');
+function hideMoreOptions() {
+    document.getElementById('moreOptions').classList.add('hidden');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -63,23 +87,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('addTally').addEventListener('click', addTally);
 
-    document.getElementById('moreOptions').classList.add('hidden');
-
     document.getElementById('moreButton').addEventListener('click', function() {
         var moreOptions = document.getElementById('moreOptions');
-        console.log(moreOptions.classList.contains('hidden'));
-        moreOptions.classList.toggle('hidden');
-        console.log(moreOptions.classList.contains('hidden'));
+        if (moreOptions.classList.contains('hidden')) {
+            moreOptions.classList.remove('hidden');
+        } else {
+            moreOptions.classList.add('hidden');
+        }
     });
 
     document.getElementById('removeTally').addEventListener('click', function() {
         subtractTally();
-        toggleMoreOptions();
+        hideMoreOptions();
     });
 
     document.getElementById('resetTally').addEventListener('click', function() {
         resetTally();
-        toggleMoreOptions();
+        hideMoreOptions();
     });
 
     document.getElementById('overlayCloseButton').addEventListener('click', function() {
