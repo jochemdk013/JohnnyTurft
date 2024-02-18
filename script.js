@@ -53,6 +53,11 @@ function subtractTally() {
     updateTallyDisplay();
 }
 
+function toggleMoreOptions() {
+    var moreOptions = document.getElementById('moreOptions');
+    moreOptions.classList.toggle('hidden');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     updateTallyDisplay();
 
@@ -87,4 +92,3 @@ document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
     }
 }, false);
-

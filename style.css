@@ -62,12 +62,20 @@ img {
     -webkit-touch-callout: none; /* iOS Safari */
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s ease-in-out;
 }
 
-.hidden {
-    display: none;
+.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 .more-button {
@@ -79,10 +87,6 @@ img {
   cursor: pointer;
   max-width: 24px;
   max-height: 24px;
-}
-
-.more-options.hidden {
-  display: none;
 }
 
 .more-options button {
@@ -110,12 +114,6 @@ img {
   opacity: 0;
   visibility: hidden;
   transition: opacity 2s ease-in-out, visibility 0s linear 2s;
-}
-
-.more-options.show {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 2s ease-in-out; 
 }
 
 .more-button:active, .more-button:focus {
