@@ -1,12 +1,11 @@
 const cacheName = 'site-static-v1';
 const assets = [
-    '',
     'index.html',
     'style.css',
     'script.js',
     'icons/add-icon.png',
     'icons/close-icon.png',
-    'icons/moreicon.png',
+    'icons/more-icon.png',
     'images/tally-0.png',
     'images/tally-1.png',
     'images/tally-2.png',
