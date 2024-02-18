@@ -63,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('addTally').addEventListener('click', addTally);
 
+    document.getElementById('moreOptions').classList.add('hidden');
+    
     document.getElementById('moreButton').addEventListener('click', function() {
         var moreOptions = document.getElementById('moreOptions');
         moreOptions.classList.toggle('hidden');
