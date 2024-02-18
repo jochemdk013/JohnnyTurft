@@ -61,13 +61,9 @@ img {
 
 .hidden {
   pointer-events: none; 
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
+  display: none;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
 
 .more-button {
   position: fixed;
@@ -102,7 +98,6 @@ img {
   background: transparent;
   border: none;
   padding: 0;
-  opacity: 1;
 }
 
 .more-button:active, .more-button:focus {
