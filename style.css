@@ -97,14 +97,11 @@ img {
 
 .more-options {
   position: fixed;
-  left: 40px;
+  left: 30px;
   bottom: 82px;
   background: transparent;
   border: none;
   padding: 0;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 2s ease-in-out, visibility 0s linear 2s;
 }
 
 .more-button:active, .more-button:focus {
