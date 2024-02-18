@@ -60,15 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('moreButton').addEventListener('click', function() {
         var moreOptions = document.getElementById('moreOptions');
-        if (moreOptions.classList.contains('show')) {
-            moreOptions.classList.remove('show');
-            moreOptions.style.opacity = '0';
-            setTimeout(function() { moreOptions.style.visibility = 'hidden'; }, 1000);
-        } else {
-            moreOptions.style.visibility = 'visible';
-            moreOptions.style.opacity = '1';
-            moreOptions.classList.add('show');
-        }
+        moreOptions.classList.toggle('show');
     });
 
     document.getElementById('removeTally').addEventListener('click', function() {
