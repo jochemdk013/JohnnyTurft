@@ -42,6 +42,10 @@ button, button img {
     cursor: pointer;
 }
 
+button, a, .touch-element {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 * {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -132,10 +136,9 @@ img {
     height: auto;
 }
 
-.addTally:active, .addTally:focus {
+.addTally:active, .addTally:focus, .more-button:active, .more-button:focus {
     background-color: transparent;
     outline: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 @media (min-width: 562px) {
