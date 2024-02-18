@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('moreButton').addEventListener('click', function() {
         var moreOptions = document.getElementById('moreOptions');
-        moreOptions.classList.toggle('show');
+        moreOptions.classList.toggle('hidden');
     });
 
     document.getElementById('removeTally').addEventListener('click', function() {
