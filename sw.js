@@ -5,7 +5,7 @@ const assets = [
     'script.js',
     'icons/add-icon.png',
     'icons/close-icon.png',
-    'icons/moreicon.png',
+    'icons/more-icon.png',
     'images/tally-0.png',
     'images/tally-1.png',
     'images/tally-2.png',

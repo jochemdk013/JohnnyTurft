@@ -1,30 +1,5 @@
 let groupCounts = [0, 0, 0, 0, 0, 0];
 
-/*
-function updateTallyDisplay() {
-    const tallyGroups = document.getElementById('tallyGroups');
-    tallyGroups.innerHTML = '';
-
-    groupCounts.forEach((count, index) => {
-        const groupDiv = document.createElement('div');
-        groupDiv.classList.add('tallyGroup');
-        
-        const img = document.createElement('img');
-        img.classList.add('tally');
-        img.src = count === 0 ? 'images/tally-0.png' : `images/tally-${count}.png`;
-        groupDiv.appendChild(img);
-
-        tallyGroups.appendChild(groupDiv);
-    });
-
-    if (groupCounts.every(count => count === 5)) {
-        document.getElementById('completeOverlay').style.display = "flex";
-    } else {
-        document.getElementById('completeOverlay').style.display = "none";
-    }
-}
-*/
-
 function updateTallyDisplay() {
     const tallyGroups = document.getElementById('tallyGroups');
     tallyGroups.innerHTML = '';
