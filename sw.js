@@ -1,6 +1,5 @@
 const cacheName = 'site-static-v1';
 const assets = [
-    '',
     'index.html',
     'style.css',
     'script.js',
