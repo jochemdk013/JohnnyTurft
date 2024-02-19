@@ -13,10 +13,11 @@ const assets = [
     'images/tally-4.png',
     'images/tally-5.png',
     'images/background.jpg',
+    'images/txt.png',
     'images/complete-image.jpg',
     'images/header-image.png',
-    'images/header-image-white.png',
-    'images/txt.png'
+    'images/header-image-white.png'
+    
 ];
 
 self.addEventListener('install', evt => {
