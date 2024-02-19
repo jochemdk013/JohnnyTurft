@@ -14,6 +14,9 @@ const assets = [
     'images/tally-5.png',
     'images/background.jpg',
     'images/complete-image.jpg'
+    'header-image.png'
+    'header-image-white.png'
+    'txt.png'
 ];
 
 self.addEventListener('install', evt => {
